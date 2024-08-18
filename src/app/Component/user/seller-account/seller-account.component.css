@@ -1,0 +1,38 @@
+.error{
+    color: rgb(255, 130, 6);
+}
+.btnSeller{
+    background-color: #04AA6D; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+}
+.btnSellerAccoutn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;   
+}
+.Contact-Form {
+    padding: 11px;
+    box-shadow: 10px 10px 5px 0px rgba(228, 228, 228, 0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgb(247, 246, 246);
+    -moz-box-shadow: 10px 10px 5px 0px rgb(242, 242, 242);
+}
+.help-text{
+    display: flex;
+    justify-content: end;
+    font-size: 25px;
+    font-family: cursive;
+    cursor: pointer;
+}
+
+.HeaddingTitel{
+    font-size: 30px;
+    font-family: serif;
+}

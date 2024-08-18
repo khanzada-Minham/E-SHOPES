@@ -1,0 +1,85 @@
+<div class="container">
+    <form [formGroup]="SellerFrom" (ngSubmit)="getSellerInformation()">
+        <p class="HeaddingTitel">Create Seller Account</p>
+        <div class="Contact-Form ">
+            <input type="text" id="companyName" placeholder="*Company Name"
+                class=" form-name-email w-100 email-form form-control" formControlName="companyName">
+            <span class="error"
+                *ngIf="this.SellerFrom.get('companyName').hasError('required') && SellerFrom.get('companyName')?.touched">Required
+                Company Name</span> 
+            <span class="error"
+                *ngIf="this.SellerFrom.get('companyName').hasError('companyAddress') && SellerFrom.get('companyName')?.touched">Invalid
+                Company Name</span>
+        </div>
+        <!--  -->
+        <div class="Contact-Form ">
+            <input type="text" id="company Email" placeholder="*Company Email"
+                class=" form-name-email w-100 email-form form-control" formControlName="companyEmail">
+            <span class="error"
+                *ngIf="this.SellerFrom.get('companyEmail').hasError('required') && SellerFrom.get('companyEmail')?.touched">Required
+                company Email</span> 
+            <span class="error"
+                *ngIf="this.SellerFrom.get('companyEmail').hasError('email') && SellerFrom.get('companyEmail')?.touched">Invalid
+                company Email</span>
+        </div>
+        <!--  -->
+        <div class="Contact-Form ">
+            <input type="text" id="companyAddress" placeholder="*Company Address"
+                class=" form-name-email w-100 email-form form-control" formControlName="companyAddress">
+            <span class="error"
+                *ngIf="this.SellerFrom.get('companyAddress').hasError('required') && SellerFrom.get('companyAddress')?.touched">Required
+                Company Address</span> 
+            <span class="error"
+                *ngIf="this.SellerFrom.get('companyAddress').hasError('companyAddress') && SellerFrom.get('companyAddress')?.touched">Invalid
+                Company Address</span>
+        </div>
+        <!--  -->
+        <div class="Contact-Form ">
+            <input type="text" id="SellerCNICNumber" placeholder="*CNIC"
+                class=" form-name-email w-100 email-form form-control" formControlName="SellerCNICNumber">
+            <span class="error"
+                *ngIf="this.SellerFrom.get('SellerCNICNumber').hasError('required') && SellerFrom.get('SellerCNICNumber')?.touched">Required
+                CNIC</span> 
+            <span class="error"
+                *ngIf="this.SellerFrom.get('SellerCNICNumber').hasError('SellerCNICNumber') && SellerFrom.get('SellerCNICNumber')?.touched">Invalid
+                CNIC</span>
+        </div>
+        <!--  -->
+        <div class="Contact-Form ">
+            <input type="text" id="CompanyPhoneNumber" placeholder="*Phone Number"
+                class=" form-name-email w-100 email-form form-control" formControlName="CompanyPhoneNumber">
+            <span class="error"
+                *ngIf="this.SellerFrom.get('CompanyPhoneNumber').hasError('required') && SellerFrom.get('CompanyPhoneNumber')?.touched">Required
+                Phone Number</span> 
+            <span class="error"
+                *ngIf="this.SellerFrom.get('CompanyPhoneNumber').hasError('CompanyPhoneNumber') && SellerFrom.get('CompanyPhoneNumber')?.touched">Invalid
+                Phone Number</span>
+        </div>
+        <!--  -->
+        <div class="Contact-Form ">
+            <input type="text" id="CompanyTexNumber" placeholder="*Tex Number"
+                class=" form-name-email w-100 email-form form-control" formControlName="CompanyTexNumber">
+            <span class="error"
+                *ngIf="this.SellerFrom.get('CompanyTexNumber').hasError('required') && SellerFrom.get('CompanyTexNumber')?.touched">Required
+                Tex Number</span> 
+            <span class="error"
+                *ngIf="this.SellerFrom.get('CompanyTexNumber').hasError('CompanyTexNumber') && SellerFrom.get('CompanyTexNumber')?.touched">Invalid
+                Tex Number</span>
+        </div>
+        <div class="btnSellerAccoutn">
+            <input type="submit" value="Create Account" class="btnSeller btn" >
+        </div>
+
+    </form>
+    <div class="help-text" (click)="openDialog() ">
+         <p >HELP</p>
+         <i class="fa fa-regular fa-question help"></i> 
+     </div>
+</div>
+
+
+
+
+   
+
+

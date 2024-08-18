@@ -1,0 +1,162 @@
+.container-detalis{
+    border-radius:20px ;
+    border: 1px solid rgb(236, 236, 236);
+}
+.product-right{
+    background-color: rgb(255, 255, 255);
+}
+.product-left{
+    background-color: rgb(248, 248, 248);
+    border-radius: 5px;
+    padding: 10px
+}
+.product-left-color{
+    background-color: rgb(248, 248, 248);
+    border-radius: 5px;
+}
+.product-image-text{
+    display: flex;
+}
+.Product-image{
+    width: 350px;
+}
+.image-text{
+    font-size: 18px;
+    font-family: revert;
+    margin-top: 20px;
+    color: black;
+}
+.checked{
+    color: orange;
+}
+.StarRating{
+    font-size: 10px;
+}
+.user-Rating{
+    margin-left: 10px;
+    font-size: 11px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+.user-Rating:hover{
+    text-decoration: underline;
+}
+.Product-price{
+    font-size: 20px;
+    color: #EB5B00;
+}
+.product-discount{
+    font-size: 13px;
+    text-decoration: line-through;
+}
+.quantity-btn{
+    border: none;
+    font-size: 15px;
+    background-color: #cdc6c6;
+}
+.quantity-name-heading{
+    margin-right: 10px;
+}
+.buyNow-btn {
+    background-color: #04AA6D; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 10px;
+    margin-top: 20px;
+
+}
+.Add-to-btn {
+    background-color: #04AA6D; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 10px;
+    margin-top: 20px;
+
+}
+
+.Delivery-icon{
+    margin-top: 7px;
+    cursor: pointer;
+}
+.Delivery-text-icon {
+    justify-content: space-between;
+}
+.location-text-icon{
+    justify-content: space-between;
+}
+.location-icon{
+    margin-top: 5px;
+}
+.change{
+    color: #04AA6D;
+    cursor: pointer;
+}
+.truck-icon-text{
+    justify-content: space-between;
+}
+.fa-comment-dots:before, .fa-commenting:before {
+    content: "\f4ad";
+    margin-right: 5px;
+}
+.truck-icon{
+    margin-top: 5px;
+}
+.cash-icon{
+    margin-top: 5px;
+}
+.cash-icon-text{
+    gap: 15px;
+}
+.Service {
+    justify-content: space-between;
+}
+.return-icon{
+    margin-right: 15px;
+}
+.Warranty-icon{
+    margin-top: 8px;
+}
+.Warranty{
+    justify-content: space-between;
+}
+.sold-by{
+    justify-content: space-between;
+    cursor: pointer;
+}
+.Seller-Rating{
+    font-size: 9px;
+    margin-top: 10px;
+}
+.reting-persent{
+    font-size: 19px;
+}
+.reating{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.saler-stor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: blue;
+    text-decoration: none;
+    cursor: pointer;
+}
+.saler-stor:hover{
+    text-decoration: underline;
+}
+.sold-by{
+    padding: 10px;
+}

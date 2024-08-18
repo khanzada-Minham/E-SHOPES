@@ -1,0 +1,16 @@
+.container-buttons{
+    position: relative;
+    margin-top: 15px;
+}
+.filter-icon{
+    position: absolute;
+    top: 8px;
+    left: 630px;
+    cursor: pointer;
+}
+.btn-icon{
+    margin-right: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #e7e7e7; color: black;
+}

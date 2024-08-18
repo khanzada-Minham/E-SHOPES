@@ -1,0 +1,14 @@
+.line{
+    text-decoration: line-through;
+    color: #505050;
+}
+.span{
+    /* display: flex;
+    justify-content: end; */
+    font-size: 20px;
+    color: #023802;
+}
+.total-prices{
+    font-size: 40px;
+    font-family: system-ui;
+}

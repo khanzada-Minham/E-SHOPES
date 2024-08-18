@@ -1,0 +1,13 @@
+/* 
+div#cdk-overlay-0 {
+    height: 100%;
+} */
+
+.container{
+    font-size: 12px;
+    max-height: 80vh;
+    
+}
+.wrapper{
+    padding: 3rem;
+}

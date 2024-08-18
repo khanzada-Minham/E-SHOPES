@@ -1,0 +1,54 @@
+<div class="container">
+    <hr>
+    <div class="row">
+        <div class="col-6">
+       <form [formGroup]="myForm">
+            <div class="Contact-login">
+                <h2 class="Contact">SingUp</h2>
+            </div>
+            <div class="First-Last-Names">
+                <input type="text" placeholder="*First Name" class="form-control form-name" id="fname" formControlName="fname">
+                <input type="text" placeholder="*Last Name" class="form-control form-name" id="lname" formControlName="lname">
+            </div>
+            <span class="error" *ngIf="this.myForm.get('fname').hasError('required') && myForm.get('fname')?.touched">Required First Name</span>
+            <span class="error" *ngIf="this.myForm.get('lname').hasError('required') && myForm.get('lname')?.touched">Required Last Name</span>
+            <div class="Contact-Form ">
+                <input type="text" id="email" placeholder="*Email"
+                    class=" form-name-email w-100 email-form form-control" formControlName="email">
+                    <span class="error" *ngIf="this.myForm.get('email').hasError('required') && myForm.get('email')?.touched">Required Email</span>
+                    <span class="error" *ngIf="this.myForm.get('email').hasError('email') && myForm.get('email')?.touched">Invalid Email</span>
+            </div>
+            <div class="Contact-Form ">
+                <input type="password" id="password" placeholder="*Password"
+                    class=" form-name-email w-100 email-form form-control" formControlName="Password">
+                    <span class="error" *ngIf="this.myForm.get('Password').hasError('required') && myForm.get('Password')?.touched">Password Email</span>
+                    <span class="error" *ngIf="this.myForm.get('Password').hasError('Password') && myForm.get('Password')?.touched">PasswordEmail</span>
+            </div>
+            <div class="cityListWrap ">
+                <select id="cityNameDropdown " class=" w-46 form-control">
+                    <option id="noSelectedOption" class="form-control" value="0">Select Country Name</option>
+                    <option value="PAKISTAN">Pakistan</option>
+                </select>
+            </div>
+           
+            <div class="address">
+                <input type="text" placeholder="*Address" class="form-address form-control" id="address" formControlName="address">
+                <span class="error" *ngIf="this.myForm.get('address').hasError('required') && myForm.get('address')?.touched">Required Address</span>
+            </div>
+            <div class="form-city">
+                <input type="text" placeholder="*City" class="form-name form-control" id="city" formControlName="city">
+                <input type="text" placeholder="*Postal code" class="form-name form-control" id="PostalCode" formControlName="PostalCode">
+            </div>
+            <span class="error" *ngIf="this.myForm.get('city').hasError('required') && myForm.get('city')?.touched">Required City</span>
+            <span class="error" *ngIf="this.myForm.get('PostalCode').hasError('required') && myForm.get('PostalCode')?.touched">Required Postal code</span>
+            <div class="form-number">
+                <input type="text" placeholder="*Phone Number" class="form-address form-control" id="number" formControlName="number">
+                <span class="error" *ngIf="this.myForm.get('number').hasError('required') && myForm.get('number')?.touched">Required Phone Number</span>
+
+            </div>
+            <div class="d-grid  col-6 py-2">
+                <button class="btn btn-success" type="button" (click)="dataForm()">Submit</button>
+            </div>
+        </form>
+    </div>
+

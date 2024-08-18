@@ -1,0 +1,63 @@
+.form-city{
+    display: flex;
+    padding: 5px;
+    gap: 5px;
+}
+.form-number{
+    padding: 5px;
+}
+.Contact-Form{
+    padding: 5px;
+}
+.Delivery-form{
+    padding: 5px;
+}
+.cityListWrap{
+    padding: 5px;
+}
+.First-Last-Names{
+    padding: 5px;
+    display: flex;
+    gap: 5px;
+}
+.address{
+    padding: 5px;
+}
+.w{
+    width: 10%;
+    border: 1px solid #ececec;
+}
+.addToCardProduct{
+    display: flex;
+    justify-content: space-around;
+}
+.product-name{
+    margin-top: 25px;
+}
+.product-prices{
+    margin-top: 25px;
+}
+.Stotal{
+    display: flex;
+    justify-content: space-around;
+}
+.Shipping{
+    display: flex;
+    justify-content: space-around;
+}
+.Total{
+    display: flex;
+    justify-content: space-around;
+}
+.discount{
+    display: flex;
+    justify-content: space-around;
+    padding: 5%;
+}
+.error{
+    color: rgb(255, 106, 0);
+}
+.discountflag1{
+    display: flex;
+    justify-content: space-around;
+}

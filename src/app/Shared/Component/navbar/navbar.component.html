@@ -1,0 +1,117 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid color-Change">
+        <div class="col-2">
+            <a class="color-Change p-2"><i class="fa fa-thin fa-phone-volume "></i>+35895388468</a>
+
+        </div>
+        <div class="col-8 d-flex justify-content-center">
+            <div class="nav-text">Get 50% off on Selected items | Shop Now</div>
+        </div>
+        <div class="col-2 d-flex justify-content-end">
+            <ul class="navbar-nav my-2 my-lg-0 navbar-nav-scroll">
+                <li class="nav-item dropdown">
+                    <a routerLink="/login" class="nav-link dropdown-toggle color-Change" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Login
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a [routerLink] ="['/SingUp']" class="nav-link dropdown-toggle color-Change" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false"> SingUp</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+<div class="container navbar-container">
+    <div class="icon-of-navbar" >
+        <img src="../../../../assets/images/countryIcons/angle-triangle.png" class="icon-hight" alt="">
+        <span class="webside-name">E-SHOPES</span>
+        <div class="position-relative">
+            <a class="nav-link dropdown-toggle  Categorise" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Categorise
+            </a>
+            <ul class="dropdown-menu">
+                <li><a [routerLink]="['/store']" [queryParams]="{category: 'headphone'}" class="dropdown-item">Headphones</a></li>
+                <li><a [routerLink]="['/store']" [queryParams]="{category: 'PowerBank'}" class="dropdown-item">PowerBank</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="">Categorise</a></li>
+                <li><a class="dropdown-item" href="">Categorise</a></li>
+            </ul>
+        </div>
+        <span class="Detals">Detals</span>
+        <span class="newDetals">What's New</span>
+        <span class="newDetals">Delivery</span>
+        <div class="Search-input">
+            <input type="text" class="form-control search" #data placeholder="Search Product" (keyup)="search(data.value)">
+            <i class="fa fa-thin fa-magnifying-glass search-icon"></i>
+           
+        </div>
+        <i class="fa fa-light fa-user  acountIcon"></i>
+        <div class="position-relative">
+            <a  class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false" >
+            Account
+        </a>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item1" ><p>Setting</p><i class="fa fa-thin fa-gear setIcon"></i></a></li>
+            <li>
+                <hr class="dropdown-divider">
+            </li>
+            
+        <li class="ProfileIcon"><a class="dropdown-item" >{{loginUserData?.name}}</a><i class="fa fa-solid fa-user-tie proIcons"></i></li>
+            <li><a routerLink="/SellerAccount" class="dropdown-item" >Seller Account</a></li>
+        </ul>
+        </div>
+        <div class="cartText position-relative ">
+            <i class="fa fa-thin fa-cart-plus Account cart-plus"><span class="cart-counter">{{this.counter}}</span>Cart</i>
+            <div class="addToCart">
+                <div class="addToCart-header">
+                    <ul>
+                        <li *ngFor="let nav of navbarDetails">
+                            <div class="row w-100">
+                                <div class="col-4">
+                                    <img [src]="nav.productImage" class="w-52">
+                                </div>
+                                <div class="col-8">
+                                    <i class="fa fa-solid fa-x close" (click)="removeItem(nav.productId)"></i>
+                                    <p>{{nav.category}}</p>
+                                    <span class="addToCart-details">Rs:{{nav.productPrice}} <p> x {{nav.productquantity}}</p></span>
+                                    <br>
+                                </div>
+                            </div>
+                            <hr>
+                        </li>
+                    </ul>
+                </div>
+                <hr>
+                <div class="addToCart-footer">
+                    <div class="addToCartPrice">
+                        <div class="addToCartTotal">Total</div>
+                        <div class="addToCartTotalPrice">Rs: {{total}}</div>
+                    </div>
+                    <a routerLink="/check-out"> <button class="btn-btn w-100"  type="button">Check Out</button></a>
+                    <a routerLink="/view-card" class="View-card">View Card</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="container"*ngIf="displayFlag">
+    <div class="row d-flex" id="flexBox">
+        <div class="col-5"  *ngFor="let display of SearchProductData">
+            <a routerLink="/product-details" [queryParams]="{proId: display.productId}" (click)="RemoveSearchProduct()">
+            <div class="searchingDisplay">
+                <img src="{{display.productImage}}" class="w">
+                <p>{{display.productName}}</p>
+                <p>Rs:{{display.productPrice}}</p>
+            </div>
+        </a>
+        </div>
+    </div>
+</div>

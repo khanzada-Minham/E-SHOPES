@@ -1,0 +1,54 @@
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Price, Range
+      </button>
+      <ul class="dropdown-menu">
+        <div class="range-values">   
+          <div class="prices-input d-flex" *ngIf="priceFlag" (keypress)="filterData(+data.value,+data1.value)">
+            <div class="filter">
+                <input type="number" class="input-min"  value="1000" #data>
+            </div>
+            <div class="saprater">-</div>
+            <div class="filter1">
+                <input type="number" class="input-mex" value="50000" #data1>
+            </div>
+        </div>
+      </div>
+      <div class="allCheckBoxes">
+        <div class="checkBoxes">
+          <p>Highest Price</p>
+          <input type="checkbox" class="checkbox" #checkBox1 (click)="HighestPriceFilter(checkBox1.checked, checkBox2)">
+        </div>
+        <div class="checkBoxes">
+          <p>Lowest Price</p>
+          <input type="checkbox" class="checkbox" #checkBox2 (click)="LowestPriceFilter(checkBox2.checked,checkBox1)">
+        </div>
+      </div>
+      </ul>
+    </div>
+<div class="container">
+  <div class="row">
+    <div class="allStore col-3 " *ngFor="let pro of productDetails">
+      <div class="center">
+        <div class="property-card">
+          <a [routerLink]="'/product-details'" [queryParams]="{proId: pro.productId}">
+          <div class="property-image" [ngStyle]="{'background-image': 'url(' + pro.productImage + ')'}">
+            <div class="property-image-title">
+            </div>
+          </div>
+          <div class="property-description">
+            <h5 class="proName"> {{pro.productName}} </h5>
+            <div class="price-update">
+              <p class="price-add">Rs: {{pro.productdiscountPrice}}</p>
+              <p class="">PKR Rs:{{pro.productPrice}}</p>
+            </div>
+          </div>
+        </a>
+          <a>
+            <div class="property-social-icons" (click)="addTwoCard(pro.productId)">Add To Card</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>

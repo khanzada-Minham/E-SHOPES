@@ -1,0 +1,83 @@
+
+.seller-profile-img{
+    display: flex;
+    justify-content: center;
+}
+
+.w-img{
+    width: 20%;
+    border: 1px solid #f2e7e7;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.seller-reteing{
+    font-size: 10px;
+    margin-left: 5px;
+}
+.seller-details{
+    display: flex;
+    width: 40%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.store-name{
+    font-size: 20px;
+}
+.matgin-plus{
+    margin-right: 10%;
+    margin-left: 4%;
+}
+.follow-icon{
+    
+    margin-left: 30%;
+    margin-top: 14px;
+}
+.chat-icon{
+    margin-left: 30%;
+    margin-top: 20%;
+}
+.seller-profile-img{
+    position: relative;
+}
+.seller-details{
+    position: absolute;
+    top: 400px;
+    background: white;
+}
+.more-deteils{
+    display: flex;
+    background: white;
+}
+.more-deteils-search{
+    margin-left: auto;
+   
+}
+.more-deteils p {
+    margin-left: 30px;
+    cursor: pointer;
+}
+.card{
+    text-decoration: none;
+    width: 388px;
+    /* height: 150px; */
+    display: flex;
+    /* flex-direction: row; */
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    margin: 0px 12px 12px 0px;
+    border: 1px solid rgb(243, 243, 243);
+}
+.card-text{
+    max-height: 50px;
+    overflow: hidden;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+.Rupees{
+    display: flex;
+    justify-content: space-around;
+}
+.div-default {
+    background-color: #095802;
+  }

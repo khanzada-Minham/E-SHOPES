@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <h1>Login</h1>
+        <form [formGroup]="myForm" (ngSubmit)="dataForm()">
+          
+            <div class="Contact-Form ">
+                <input type="text" id="email" placeholder="*Email"
+                    class=" form-name-email w-100 email-form form-control" formControlName="email">
+                <span class="error"
+                    *ngIf="this.myForm.get('email').hasError('required') && myForm.get('email')?.touched">Required
+                    Email</span>
+                <span class="error"
+                    *ngIf="this.myForm.get('email').hasError('email') && myForm.get('email')?.touched">Invalid
+                    Email</span>
+            </div>
+            <div class="Contact-Form ">
+                <input type="password" id="password" placeholder="*Password"
+                    class=" form-name-email w-100 email-form form-control" formControlName="Password">
+                <span class="error"
+                    *ngIf="this.myForm.get('Password').hasError('required') && myForm.get('Password')?.touched">Password
+                    Email</span>
+                <span class="error"
+                    *ngIf="this.myForm.get('Password').hasError('Password') && myForm.get('Password')?.touched">PasswordEmail</span>
+            </div>
+            <div class="d-grid gap-2 col-6 mx-auto">
+            <button class="btn btn-success" type="submit">Button</button>
+            </div>
+        </form>
+
+    </div>
+</div>

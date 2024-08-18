@@ -1,0 +1,97 @@
+<div class="container container-detalis">
+    <div class="row">
+        <div class="col-8">
+            <div class="product-right">
+                <div class="product-image-text">
+                    <img [src]="productDetailModel.productImage"
+                        class="Product-image">
+                    <div class="image-text col-6">
+                        <p>{{productDetailModel.productDescription}}</p>
+                        <div class="StarRating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <a class="user-Rating">30 Rating</a>
+                            <hr>
+                            <p class="product-discount">Rs:{{productDetailModel.productdiscountPrice}}</p>
+                            <p class="Product-price">PKR Rs:{{productDetailModel.productPrice}}</p>
+                        </div>
+                        <div class="quantity-inputes">
+                           <span class="quantity-name-heading">Quantity</span> 
+                            <input class="quantity-btn" type="button" value="-" (click)="notAddCounter()">{{counter}}
+                            <input class="quantity-btn" type="button" value="+" (click)="addCounter()" [max]="productDetailModel.productInStock">
+                        </div>
+                        <div class="buyNow-button">
+                           <a routerLink="/check-out"><button class="buyNow-btn" (click)="addTwoCard(productDetailModel.productId)">Buy Now</button></a> 
+                            <button class="Add-to-btn" (click)="addTwoCard(productDetailModel.productId)">Add To Card</button>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="product-left">
+                <div class="Delivery-text-icon d-flex">
+                    <p>Delivery</p>
+                    <i class="fa fa-thin fa-circle-exclamation Delivery-icon"></i>
+                </div>
+                <div class="location-text-icon d-flex">
+                    <i class="fa fa-thin fa-location-dot location-icon"></i>
+                    <p>Sindh, Karachi - Gulshan-e-Iqbal, Block 15</p>
+                    <span class="change">CHANGE</span>
+                </div>
+                <hr>
+                <div class="truck-icon-text d-flex">
+                    <i class="fa fa-thin fa-truck truck-icon"></i>
+                    <span>Standard Delivery 7 Aug - 12 Aug 5-10 day(s)</span>
+                    <p>Rs. 145</p>
+                </div>
+                <div class="cash-icon-text d-flex">
+                    <i class="fa fa-thin fa-money-bill-1 cash-icon"></i>
+                    <span>Cash on Delivery Available</span>
+                </div>
+                <hr>
+                <div class="Service d-flex ">
+                    <span>Service</span>
+                    <i class="fa fa-thin fa-circle-exclamation Delivery-icon"></i>
+                </div>
+                <div class="returnText-icon">
+                    <i class="fa fa-thin fa-snowflake return-icon"></i>
+                    <span >14 days free & easy return</span>
+                    <span class="return-text">Change of mind is not applicable..</span>
+                </div>
+                <div class="Warranty d-flex">
+                    <i class="fa fa-thin fa-award Warranty-icon"></i>
+                    <span>Warranty not available</span>
+                </div>
+                <hr>
+            </div>
+            <div class="product-left-color">
+            <div class="sold-by d-flex">
+                <div class="sold-by-text">Sold by The Royal Traders</div>
+                <i class="fa fa-thin fa-comment-dots">Chat Now</i>
+            </div>
+            <div class="row reating">
+                <div class="col-3 Seller-Rating">
+                    <p>Seller Ratings</p>
+                    <span class="reting-persent">92%</span>
+                </div>
+                <div class="col-3 Seller-Rating">
+                    <p>Ship on Time</p>
+                    <span class="reting-persent">96%</span>
+                </div>
+                <div class="col-3 Seller-Rating">
+                    <p>Chat Response Rate</p>
+                    <span class="reting-persent">91%</span>
+                </div>
+            </div>
+            <hr>
+            <a routerLink="/seller" class="saler-stor"> GO TO STORE</a>
+        </div>
+        </div>
+    </div>
+</div>
+

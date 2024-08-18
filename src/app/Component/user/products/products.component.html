@@ -1,0 +1,21 @@
+<app-user-profile-image></app-user-profile-image>
+<div class="container">
+    <div class="row">
+        <div class="allStore col-3 " *ngFor="let data of productDetails">
+            <div class="card " style="width: 18rem;">
+             <a routerLink="/product-details">
+                 <img [src]="data.productImage" class="card-img-top w-70"></a>
+                 <div class="card-body ">
+                   <h5 class="card-title">{{data.productName}}</h5>
+                   <div class="price-update">
+                 
+                     <p class="price-add">Rs:{{data.productdiscountPrice}}</p>
+                     <p class="">PKR Rs:{{data.productPrice}}</p>
+                   </div>
+                   <p class="card-text">{{data.productDescription}}...</p>
+                   <a  class="btn btn-success center">Add To Card</a>
+                 </div>
+               </div>
+         </div>
+    </div>
+</div>
